@@ -25,7 +25,7 @@ This one is the most importante. If you do not follow this first principle you c
 Well, it is simple, every class you create at yur project must have just one job. 
 When you design a class, this class should solve a specific think at your applilcation. I mean, it just know how to do one thing, and be specialised on it. 
 
-Let's see some comde.
+Let's see some code.
 
 At SOLID solution, open the SOLID.SRP Console Application project. You can notice that there is a Entity folder and a Person class. 
 This class (Person) knows how to create it's self and verify if it's valid. Looking deep at IsValid method, you can see that Person class do not know how to validate a email, so it calls a EmailService class, that can handle it!
