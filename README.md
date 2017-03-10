@@ -39,4 +39,9 @@ The gains with maintance is pretty clear, do not you think ?
 it's good to use this principle to methods too, not just classes. 
 Do not worry about having too much classes or methods, it's really important to give to they just one action, so you can make things more clearly.
 
+##O 
+###Open-Closed Principle (OCP)
+
+"_Software entities should be open for extensions but closed for modifications._"
+
 
