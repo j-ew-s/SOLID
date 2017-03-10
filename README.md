@@ -27,16 +27,19 @@ When you design a class, this class should solve a specific think at your applil
 
 Let's see some code.
 
-At SOLID solution, open the SOLID.SRP Console Application project. You can notice that there is a Entity folder and a Person class. 
+At SOLID solution, open the SOLID.SRP Console Application project. You can notice that there is a Entity folder and a Person class.
+
 This class (Person) knows how to create it's self and verify if it's valid. Looking deep at IsValid method, you can see that Person class do not know how to validate a email, so it calls a EmailService class, that can handle it!
-EmailService class knows how to validate a email and also knows how to send too! Well, it's all about email.
-Going back to Person class, the same thing will happen to Phone, Person can not tell the application if a phone number is a valid number, so it calls PhoneService class, that should know how to handle it(I know, its not implemented). 
+
+EmailService class knows how to validate an email and also knows how to send too! Well, it's all about email.
+
+Going back to Person class, the same thing will happen to Phone, Person can not tell to the application if a phone number is valid, so it calls PhoneService class, that should know how to handle it(I know, its not implemented). 
 
 The rest of this SRP example have classes and methods that just do one thing, you can see by yourself. 
 
 The gains with maintance is pretty clear, do not you think ?
 
-it's good to use this principle to methods too, not just classes. 
+Use this principle to methods too, not just classes. 
 Do not worry about having too much classes or methods, it's really important to give to they just one action, so you can make things more clearly.
 
 ##O 
