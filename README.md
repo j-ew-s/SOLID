@@ -47,4 +47,6 @@ Do not worry about having too much classes or methods, it's really important to 
 
 "_Software entities should be open for extensions but closed for modifications._"
 
+This means, when you face a necessity to add adaptiations or new treatments to a method for example, you will not alter this code adding new stuffs, you will extend this and customizing with new stuffs.
+
 
