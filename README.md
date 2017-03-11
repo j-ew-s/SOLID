@@ -47,6 +47,22 @@ Do not worry about having too much classes or methods, it's really important to 
 
 "_Software entities should be open for extensions but closed for modifications._"
 
-This means, when you face a necessity to add adaptiations or new treatments to a method for example, you will not alter this code adding new stuffs, you will extend this and customizing with new stuffs.
+Isso significa que quando você enfrenta a necessidade de adicionar adaptações ou novos tratamentos a um método, por exemplo, você não alterará este código adicionando novos materiais, você deve estendê-lo e personalizar com seu novo código.
 
+Well, to be more clear, take a look at SOLID.OCP Console Application. You will find a Service folder wich contains FileService class.
+This class has the Generate method, and this method just do one thing: Calls the CreateArchive for any file extension you pass to it.
 
+So, to came to this aproach, we must use Abstractions.
+Abstract classes means that this class can not be Instantiated, but Inherited and it can contains properties and methods, wich could/should be abstractions too.
+
+Looking back to our definition, the File class is closed to modifications and open to extensions.
+
+Following the example, we have the  WordFile and PDFFile class that inheritage from the Abstract Class File and override the CreateArchive method. WordFile and PDFFile have they own idea of how to generate a file, so, let they do the job.
+
+What is common in this case, let's call it as _violation_ is, at FileService class our Generate method will have a lot of _if_ or _switch_ that select the properly block of code wich will treat the CreateArchive. So, this Method and Class by consequence will have more than one reason to change, violatin the SRP. 
+
+Another problems that it create is : errors that can rise. If your new _if_ that treat a new file implementation have some bug all the class will broke the build, even for the ones that were not even modified; and if you have tests, every time you put a treatment, you must change your test; and also if you increase the quantity of _if_ you will increase your software cyclomatic complexity. Think about it.
+
+Ok, it's the hard one, in my opinion. It does not mean that when we write a class this class will never ever be modified again, because, changes may occurr: this is software development. But we must be attentive  about how handle extensions, trying to prevent failures to classes that already implement our dll's. 
+
+* In most cases, we use to use Abstract classes instead of Interfaces because you can have properties.
