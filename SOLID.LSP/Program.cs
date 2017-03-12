@@ -9,8 +9,8 @@ namespace SOLID.LSP
             var customer = Customer.CreateCustomer("Gabriel", "Scavassa", Convert.ToDateTime("22/06/1997"), 12345);
             var employee = Employee.CreateEmployee("Leirbag", "Assavacs", 52100, 13);
 
-            var customerValid = IdentityService.ValidatePerson(customer);
-            var employeeValid = IdentityService.ValidatePerson(employee);
+            var customerValid = IdentityService.ValidateIDTags(customer);
+            var employeeValid = IdentityService.ValidateIDTags(employee);
 
         }
     }
