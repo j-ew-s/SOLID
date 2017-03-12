@@ -66,3 +66,19 @@ Another problems that it create is : errors that can rise. If your new _if_ that
 Ok, it's the hard one, in my opinion. It does not mean that when we write a class this class will never ever be modified again, because, changes may occurr: this is software development. But we must be attentive  about how handle extensions, trying to prevent failures to classes that already implement our dll's. 
 
 * In most cases, we use to use Abstract classes instead of Interfaces because you can have properties.
+
+##L
+###Liskov Substitution Principle (LSP)
+
+"_Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it_".
+
+Every subclasse should be substituable by it's base class without a warning.
+
+A method M that treat a behavor of a subclass B using its Base class A as parameter, must know every sobclasses of A so it can treat properly. When a new A subclass is added, you shoul alter M to the new treatment, violating OCP. Cool.
+
+You can look at SOLID.LSP Console Application project. Open the Service folder, and in IdentityService at method ValidateIDTags you can see that Person is a parameter and it calls IdentificationIsValid mehtod. Go to Program.cs and you will see that what is pasted to ValidateIDTags is a Customer and Employee. 
+
+Both Customer and Employee are subclass of Person. Because of abstraction the ValidateIDTags method can recieve a People class and do not knowing who truly is. Beautful, don't you think?
+
+Note that, we have not a lot of _IF_ we have no treatment to know who's the parameter, we just call the method we want.
+
