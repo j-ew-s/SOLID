@@ -47,7 +47,7 @@ Do not worry about having too much classes or methods, it's really important to 
 
 "_Software entities should be open for extensions but closed for modifications._"
 
-Isso significa que quando você enfrenta a necessidade de adicionar adaptações ou novos tratamentos a um método, por exemplo, você não alterará este código adicionando novos materiais, você deve estendê-lo e personalizar com seu novo código.
+When you face the necessity of adding a new feature to a method, for example, you shlould not have to alter it, just extend a new class to implement this. 
 
 Well, to be more clear, take a look at SOLID.OCP Console Application. You will find a Service folder wich contains FileService class.
 This class has the Generate method, and this method just do one thing: Calls the CreateArchive for any file extension you pass to it.
