@@ -82,3 +82,15 @@ Both Customer and Employee are subclass of Person. Because of abstraction the Va
 
 Note that, we have not a lot of _IF_ we have no treatment to know who's the parameter, we just call the method we want.
 
+##I
+###Interface Segregation Principle (ISP)
+
+"_Make fine grained interfaces that are client specific_".
+
+A class should not have to implement a method that will never use. Well, we use interfaces to create contracts and some times more than one class uses this interface, so this classes must use all of interfaces contracts, just one contrat this classes do not uses it is already a reason to do not use this interfece.
+
+Take a look at SOLID.ISP Console Application. You can see that we have Car, Airplane and Boat classes. They all are vehicles, but have different behavors so I isolted they interfaces. Put all this contracts in just one interface called IVehicles would be a violation. Boa class will never use the Taxiing method or Car will never have to Row(I hope. if it does, I am so sorry for you).
+
+It's simple, so much like SRP.
+
+
