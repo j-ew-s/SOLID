@@ -3,14 +3,14 @@ This repository is my study about SOLID principles.
 
 ---
 
-*S.O.L.I.D* is a achronomus for the five princles of Object-oriented Programing (O.O.P.) first identified by **Robert C. Martin** (**Uncle Bob**) and named by **Michael Feathers**.
+This five princles of Object-oriented Programing (O.O.P.) first identified by **Robert C. Martin** (**Uncle Bob**) and named as *S.O.L.I.D* by **Michael Feathers**.
 
-Well, the achronomous stands for: 
-+ **_S_** - (SRP) - Single Responsability Princile
-+ **_O_** - (OCP) - Open Closed Principle
-+ **_L_** - (LSP) - Liskov Substitution Principle
-+ **_I_** - (ISP) - Interface Segregation Principle
-+ **_D_** - (DIP) - Dependency Inversion Principle.
+Well, the SOLID achronomous stands for: 
++ **_S_** - Single Responsability Princile (SRP)
++ **_O_** - Open Closed Principle (OCP)
++ **_L_** - Liskov Substitution Principle (LSP)
++ **_I_** - Interface Segregation Principle (ISP)
++ **_D_** - Dependency Inversion Principle (DIP)
 
 
 Let's see what each one of the principles means. 
