@@ -93,4 +93,20 @@ Take a look at SOLID.ISP Console Application. You can see that we have Car, Airp
 
 It's simple, so much like SRP.
 
+##D
+###Dependency Inversion Principle (DIP)
+
+"_1. High level modules should not depend upo low level modules. Both should depend on abstractions. 2. Abstractions should not depend upon details. Detains should depend upon abstractions_. 
+
+Depends on abstractions not on concretions, this is the idea.
+Its not good when we depends on a concretions, if an change is done to the low level module, your high level may be affected.
+
+Go to SOLID.DIP Console Application project. In the Program.cs depends on a IEngine interface. Program.cs does not know how to create they implementation, but know it's should use the Start method.
+At concrete folder we have Car.cs and it implements the IEngine interface. So, Program.cs could use Cars class without knowing how to creat it. Any change on Car class will not affect the Program.cs.
+
+
+
+
+
+This is my conclusion about S.O.L.I.D. 
 
