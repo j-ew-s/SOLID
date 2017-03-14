@@ -12,9 +12,10 @@ namespace SOLID.DIP
         
         public static void Main(string[] args)
         {
+            //REGISTERING THE INTERFACE
+            //It could -should- be isolated in another class.
             var c = new Container();
             c.Register<IEngine, Car>();
-            c.Register<IEngine, Motorcycle>();
 
             // somewhere else
             IEngine client = c.Resolve<IEngine>();
