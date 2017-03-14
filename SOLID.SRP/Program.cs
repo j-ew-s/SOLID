@@ -11,7 +11,7 @@ namespace SOLID.SRP
     {
         static void Main(string[] args)
         {
-            var a = new Person();
+            
             var person = Person.CreatePerson("Gabriel", "Scavassa", Convert.ToDateTime("22/06/1987"), "gabriel.scavassa@outlook.com", "14997774426");
             if (!person.IsValid())
             {
