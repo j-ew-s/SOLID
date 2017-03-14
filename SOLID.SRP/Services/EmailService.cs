@@ -10,11 +10,6 @@ namespace SOLID.SRP
 {
     public static class EmailService
     {
-        public static bool IsValid(string email)
-        {
-            return Regex.IsMatch(email, @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
-        }
-
         public static void SendEmail(Email email)
         {
             var mail = new MailMessage(email.From, email.To);

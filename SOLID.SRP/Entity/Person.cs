@@ -29,7 +29,11 @@ namespace SOLID.SRP
 
         public bool IsValid()
         {
-            return EmailService.IsValid(Email) && BirthIsValid() && NameIsValid() && LastNameIsValid() && PhoneService.IsValid(Phone);
+            return SOLID.SRP.DataTransferObjects.Email.IsPropertyEmailValid(Email) &&
+                BirthIsValid() && 
+                NameIsValid() && 
+                LastNameIsValid() && 
+                PhoneService.IsValid(Phone);
         }
 
         bool BirthIsValid() { 

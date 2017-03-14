@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace SOLID.SRP.DataTransferObjects
 {
@@ -26,8 +27,13 @@ namespace SOLID.SRP.DataTransferObjects
         {
             return  SubjectIsValid(email.Subject) &&
                     BodyIsValid(email.Body) &&
-                    EmailService.IsValid(email.From) &&
-                    EmailService.IsValid(email.To);
+                    IsPropertyEmailValid(email.From) &&
+                    IsPropertyEmailValid(email.To);
+        }
+
+        public static bool IsPropertyEmailValid(string email)
+        {
+            return Regex.IsMatch(email, @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
         }
 
         public static bool SubjectIsValid(string subject) { 
