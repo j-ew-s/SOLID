@@ -3,14 +3,14 @@ This repository is my study about SOLID principles.
 
 ---
 
-*S.O.L.I.D* is a achronomus for the five princles of Object-oriented Programing (O.O.P.) first identified by **Robert C. Martin** (**Uncle Bob**) and named by **Michael Feathers**.
+This five princles of Object-oriented Programing (O.O.P.) first identified by **Robert C. Martin** (**Uncle Bob**) and named as *S.O.L.I.D* by **Michael Feathers**.
 
-Well, the achronomous stands for: 
-+ **_S_** - (SRP) - Single Responsability Princile
-+ **_O_** - (OCP) - Open Closed Principle
-+ **_L_** - (LSP) - Liskov Substitution Principle
-+ **_I_** - (ISP) - Interface Segregation Principle
-+ **_D_** - (DIP) - Dependency Inversion Principle.
+Well, the SOLID achronomous stands for: 
++ **_S_** - Single Responsability Princile (SRP)
++ **_O_** - Open Closed Principle (OCP)
++ **_L_** - Liskov Substitution Principle (LSP)
++ **_I_** - Interface Segregation Principle (ISP)
++ **_D_** - Dependency Inversion Principle (DIP)
 
 
 Let's see what each one of the principles means. 
@@ -47,7 +47,7 @@ Do not worry about having too much classes or methods, it's really important to 
 
 "_Software entities should be open for extensions but closed for modifications._"
 
-Isso significa que quando você enfrenta a necessidade de adicionar adaptações ou novos tratamentos a um método, por exemplo, você não alterará este código adicionando novos materiais, você deve estendê-lo e personalizar com seu novo código.
+When you face the necessity of adding a new feature to a method, for example, you shlould not have to alter it, just extend a new class to implement this. 
 
 Well, to be more clear, take a look at SOLID.OCP Console Application. You will find a Service folder wich contains FileService class.
 This class has the Generate method, and this method just do one thing: Calls the CreateArchive for any file extension you pass to it.
@@ -66,3 +66,47 @@ Another problems that it create is : errors that can rise. If your new _if_ that
 Ok, it's the hard one, in my opinion. It does not mean that when we write a class this class will never ever be modified again, because, changes may occurr: this is software development. But we must be attentive  about how handle extensions, trying to prevent failures to classes that already implement our dll's. 
 
 * In most cases, we use to use Abstract classes instead of Interfaces because you can have properties.
+
+##L
+###Liskov Substitution Principle (LSP)
+
+"_Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it_".
+
+Every subclasse should be substituable by it's base class without a warning.
+
+A method M that treat a behavor of a subclass B using its Base class A as parameter, must know every sobclasses of A so it can treat properly. When a new A subclass is added, you shoul alter M to the new treatment, violating OCP. Cool.
+
+You can look at SOLID.LSP Console Application project. Open the Service folder, and in IdentityService at method ValidateIDTags you can see that Person is a parameter and it calls IdentificationIsValid mehtod. Go to Program.cs and you will see that what is pasted to ValidateIDTags is a Customer and Employee. 
+
+Both Customer and Employee are subclass of Person. Because of abstraction the ValidateIDTags method can recieve a People class and do not knowing who truly is. Beautful, don't you think?
+
+Note that, we have not a lot of _IF_ we have no treatment to know who's the parameter, we just call the method we want.
+
+##I
+###Interface Segregation Principle (ISP)
+
+"_Make fine grained interfaces that are client specific_".
+
+A class should not have to implement a method that will never use. Well, we use interfaces to create contracts and some times more than one class uses this interface, so this classes must use all of interfaces contracts, just one contrat this classes do not uses it is already a reason to do not use this interfece.
+
+Take a look at SOLID.ISP Console Application. You can see that we have Car, Airplane and Boat classes. They all are vehicles, but have different behavors so I isolted they interfaces. Put all this contracts in just one interface called IVehicles would be a violation. Boa class will never use the Taxiing method or Car will never have to Row(I hope. if it does, I am so sorry for you).
+
+It's simple, so much like SRP.
+
+##D
+###Dependency Inversion Principle (DIP)
+
+"_1. High level modules should not depend upo low level modules. Both should depend on abstractions. 2. Abstractions should not depend upon details. Detains should depend upon abstractions_. 
+
+Depends on abstractions not on concretions, this is the idea.
+Its not good when we depends on a concretions, if an change is done to the low level module, your high level may be affected.
+
+Go to SOLID.DIP Console Application project. In the Program.cs depends on a IEngine interface. Program.cs does not know how to create they implementation, but know it's should use the Start method.
+At concrete folder we have Car.cs and it implements the IEngine interface. So, Program.cs could use Cars class without knowing how to creat it. Any change on Car class will not affect the Program.cs.
+
+
+
+
+
+This is my conclusion about S.O.L.I.D. 
+
