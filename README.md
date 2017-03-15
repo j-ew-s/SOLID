@@ -29,7 +29,7 @@ Let's see some code.
 
 At SOLID solution, open the SOLID.SRP Console Application project. You can notice that there is a Entity folder and a Person class.
 
-This class (Person) knows how to create it's self and verify if it's valid. Looking deep at IsValid method, you can see that Person class do not know how to validate a email, so it calls a EmailService class, that can handle it!
+This class (Person) knows how to create it's self and verify if it's valid. Looking deep at IsValid method, you can see that Person class do not know how to validate a email, so it calls a Email class, that can handle it!
 
 EmailService class knows how to validate an email and also knows how to send too! Well, it's all about email.
 
