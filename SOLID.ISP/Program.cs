@@ -9,15 +9,18 @@ namespace SOLID.ISP
     {
         public static void Main(string[] args)
         {
-            Airplane.Taxiing();
-            Airplane.TakeOf();
-            Airplane.Land();
+            var airPlane = new Airplane();
+            airPlane.Taxiing();
+            airPlane.TakeOf();
+            airPlane.Land();
 
-            Car.StarEngine();
-            Car.Park();
+            var car = new Car();
+            car.StarEngine();
+            car.Park();
 
-            Boat.Dock();
-            Boat.Row();
+            var boat = new Boat();
+            boat.Dock();
+            boat.Row();
         }
     }
 }

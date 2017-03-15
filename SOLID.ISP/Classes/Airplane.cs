@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SOLID.ISP
 {
-    public class Airplane : IAirplane
+    public  class Airplane : IAirplane
     {
         public  void Land()
         {
