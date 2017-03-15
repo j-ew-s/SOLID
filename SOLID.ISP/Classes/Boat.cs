@@ -7,12 +7,12 @@ namespace SOLID.ISP
 {
     public class Boat : IBoat
     {
-        public static void Dock()
+        public  void Dock()
         {
             throw new NotImplementedException();
         }
 
-        public static void Row()
+        public  void Row()
         {
             throw new NotImplementedException();
         }

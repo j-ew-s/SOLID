@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace SOLID.ISP
 {
-    public  static class Car : ICar
+    public   class Car : ICar
     {
-        public static void Park()
+        public  void Park()
         {
             throw new NotImplementedException();
         }
 
-        public static void StarEngine()
+        public  void StarEngine()
         {
             throw new NotImplementedException();
         }

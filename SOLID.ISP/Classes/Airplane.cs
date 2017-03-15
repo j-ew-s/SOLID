@@ -7,17 +7,17 @@ namespace SOLID.ISP
 {
     public class Airplane : IAirplane
     {
-        public static void Land()
+        public  void Land()
         {
             throw new NotImplementedException();
         }
 
-        public static void TakeOf()
+        public  void TakeOf()
         {
             throw new NotImplementedException();
         }
 
-        public static void Taxiing()
+        public  void Taxiing()
         {
             throw new NotImplementedException();
         }
