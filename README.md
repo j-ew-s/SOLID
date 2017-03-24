@@ -18,7 +18,7 @@ Let's see what each one of the principles means.
 ##S 
 ###Single Responsability Principle (SRP)
 
-"_A class should have only one, and only one, reason to change._"
+"_A class should have one, and only one, reason to change._"
 
 This one is the most importante. If you do not follow this first principle you can not apply the others principles properly. 
 
