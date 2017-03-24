@@ -15,8 +15,9 @@ Well, the SOLID achronomous stands for:
 
 Let's see what each one of the principles means. 
 
-##S 
-###Single Responsability Principle (SRP)
+## S 
+
+### Single Responsability Principle (SRP)
 
 "_A class should have one, and only one, reason to change._"
 
@@ -42,8 +43,8 @@ The gains with maintance is pretty clear, do not you think ?
 Use this principle to methods too, not just classes. 
 Do not worry about having too much classes or methods, it's really important to give to they just one action, so you can make things more clearly.
 
-##O 
-###Open-Closed Principle (OCP)
+## O 
+### Open-Closed Principle (OCP)
 
 "_Software entities should be open for extensions but closed for modifications._"
 
@@ -67,8 +68,8 @@ Ok, it's the hard one, in my opinion. It does not mean that when we write a clas
 
 * In most cases, we use to use Abstract classes instead of Interfaces because you can have properties.
 
-##L
-###Liskov Substitution Principle (LSP)
+## L
+### Liskov Substitution Principle (LSP)
 
 "_Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it_".
 
@@ -82,8 +83,8 @@ Both Customer and Employee are subclass of Person. Because of abstraction the Va
 
 Note that, we have not a lot of _IF_ we have no treatment to know who's the parameter, we just call the method we want.
 
-##I
-###Interface Segregation Principle (ISP)
+## I
+### Interface Segregation Principle (ISP)
 
 "_Make fine grained interfaces that are client specific_".
 
@@ -93,8 +94,8 @@ Take a look at SOLID.ISP Console Application. You can see that we have Car, Airp
 
 It's simple, so much like SRP.
 
-##D
-###Dependency Inversion Principle (DIP)
+## D
+### Dependency Inversion Principle (DIP)
 
 "_1. High level modules should not depend upo low level modules. Both should depend on abstractions. 2. Abstractions should not depend upon details. Detains should depend upon abstractions_. 
 
@@ -107,6 +108,11 @@ At concrete folder we have Car.cs and it implements the IEngine interface. So, P
 
 
 
+---
+
 
 This is my conclusion about S.O.L.I.D. 
+
+If you have any consideration, let me know! 
+gabriel.scavassa@outlook.com.
 
