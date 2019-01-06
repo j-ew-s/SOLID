@@ -23,7 +23,7 @@ Let's see what each one of the principles means.
 
 This one is the most importante. If you do not follow this first principle you can not apply the others principles properly. 
 
-Well, it is simple, every class you create at yur project must have just one job. 
+Well, it is simple, every class you create at your project must have just one job. 
 When you design a class, this class should solve a specific think at your applilcation. I mean, it just know how to do one thing, and be specialised on it. 
 
 Let's see some code.
