@@ -73,7 +73,7 @@ Ok, it's the hard one, in my opinion. It does not mean that when we write a clas
 
 "_Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it_".
 
-Every subclasse should be substituable by it's base class without a warning.
+Every subclasse should be substitutable by it's base class without a warning.
 
 A method M that treat a behavor of a subclass B using its Base class A as parameter, must know every sobclasses of A so it can treat properly. When a new A subclass is added, you shoul alter M to the new treatment, violating OCP. Cool.
 
